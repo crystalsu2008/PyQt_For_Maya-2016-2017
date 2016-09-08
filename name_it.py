@@ -35,53 +35,35 @@ from functools import partial
 dialog = None
 
 #Path to the designer UI file
-ui_filename = Dir+'/ui/SimpleUI.ui'
+ui_filename = Dir+'/ui/name_it.ui'
 form_class, base_class = loadUiType(ui_filename)
 
 #--------------------------------------------------------------------------------#
 
-#Interface class
-class SimpleUI(base_class, form_class):
+class NameIt(base_class, form_class):
     def __init__(self):
         # Call base_class's __init__()
-        super(SimpleUI, self).__init__()
+        super(NameIt, self).__init__()
         # Call .ui file's setup function
         self.setupUi(self)
 
         self.setWindowFlags(qc.Qt.WindowStaysOnTopHint)
         self.setModal(False)
 
-        #self.layout_1_bttn.clicked.connect(partial(self.stacked_layout.setCurrentIndex, 0))
-        #self.layout_2_bttn.clicked.connect(partial(self.stacked_layout.setCurrentIndex, 1))
-        #self.layout_3_bttn.clicked.connect(partial(self.stacked_layout.setCurrentIndex, 2))
-        #self.layout_4_bttn.clicked.connect(partial(self.stacked_layout.setCurrentIndex, 3))
 
-        #self.middle_frame.layout().setAlignment(qc.Qt.AlignBottom)
 
-        reg_ex = qc.QRegExp("[a-zA-Z_]+")
-        text_validator = qg.QRegExpValidator(reg_ex, self.example_le)
-        self.example_le.setValidator(text_validator)
 
-        self.example_sb.setButtonSymbols(0)
 
-        self.example_bttn.clicked.connect(self.printText)
-        self.example_check.stateChanged.connect(self.example_bttn.setDisabled)
 
-        self.button_grp_1.buttonClicked.connect(self.addToTextEdit)
 
-    def printText(self):
-        print self.example_te.toPlainText()
 
-    def addToTextEdit(self, button):
-        button_text = button.text()
-        self.example_te.setText(self.example_te.toPlainText() + button_text)
 
 #--------------------------------------------------------------------------------#
 
 def create():
     global dialog
     if dialog is None:
-        dialog = SimpleUI()
+        dialog = NameIt()
     dialog.show()
 
 def delete():

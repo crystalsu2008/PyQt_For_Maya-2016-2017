@@ -10,8 +10,8 @@
 
 &emsp; I work on 64-bit Windows 10 and [Python 2.7.12(64-bit)](https://www.python.org/downloads/release/python-2712/). So I just need to download and install the Windows 64-bit Installer, [PyQt4-4.11.4-gpl-Py2.7-Qt4.8.7-x64.exe](https://riverbankcomputing.com/software/pyqt/download) , no need to build and install SIP or build PyQt4.
 
->&emsp; I'm also work with Maya 2013, but Maya 2013 uses [Python 2.6](https://www.python.org/download/releases/2.6.6/)(Since Maya 2014 they use Python 2.7). So I installed the Python 2.6 and [PyQt4-4.10-Py2.6](https://sourceforge.net/projects/pyqt/files/PyQt4/PyQt-4.10/). When I try to import PyQt4.QtCore and PyQt4.QtGui in the Maya Script Editor, I get the following error:
-```
+>&emsp; I also work with Maya 2013, but Maya 2013 uses [Python 2.6](https://www.python.org/download/releases/2.6.6/)(Since Maya 2014 they use Python 2.7). So I installed the Python 2.6 and [PyQt4-4.10-Py2.6](https://sourceforge.net/projects/pyqt/files/PyQt4/PyQt-4.10/). When I try to import PyQt4.QtCore and PyQt4.QtGui in the Maya Script Editor, I get the following error:
+```Python
 import PyQt4.QtCore
 # Error: ImportError: file <maya console> line 1: DLL load failed: The specified procedure could not be found. #
 ```
