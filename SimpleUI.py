@@ -11,13 +11,15 @@ except: versions.v2015 = 201500
 
 if versions.current() >= versions.v2017:
     import PySide2.QtCore    as qc
-    import PySide2.QtWidgets as qg
+    import PySide2.QtWidgets as qw
+    import PySide2.QtGui     as qg
     if Dir not in sys.path:
         sys.path.append(Dir)
     import PraLib.utils.generic as generic;reload(generic)
     from PraLib.utils.generic import loadUiType
 elif versions.current() >= versions.v2015:
     import PySide.QtCore     as qc
+    import PySide.QtGui      as qw
     import PySide.QtGui      as qg
     if Dir not in sys.path:
         sys.path.append(Dir)
@@ -27,6 +29,7 @@ else:
     if PyQt4Dir not in sys.path:
         sys.path.append(PyQt4Dir)
     import PyQt4.QtCore      as qc
+    import PyQt4.QtGui       as qw
     import PyQt4.QtGui       as qg
     from PyQt4.uic import loadUiType
 
@@ -62,10 +65,17 @@ class SimpleUI(base_class, form_class):
         text_validator = qg.QRegExpValidator(reg_ex, self.example_le)
         self.example_le.setValidator(text_validator)
 
-        self.example_sb.setButtonSymbols(0)
-
         self.example_bttn.clicked.connect(self.printText)
         self.example_check.stateChanged.connect(self.example_bttn.setDisabled)
+
+        self.button_grp_1 = qw.QButtonGroup(self)
+        self.button_grp_2 = qw.QButtonGroup(self)
+
+        self.button_grp_1.addButton(self.a_radio)
+        self.button_grp_1.addButton(self.b_radio)
+
+        self.button_grp_2.addButton(self.c_radio)
+        self.button_grp_2.addButton(self.d_radio)
 
         self.button_grp_1.buttonClicked.connect(self.addToTextEdit)
 
