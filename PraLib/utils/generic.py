@@ -43,7 +43,7 @@ def undo_pm(func):
 
 def loadUiType(uiFile):
     """
-    PySide2 lacks the "loadUiType" command, so we have to convert the ui file
+    PySide lacks the "loadUiType" command, so we have to convert the ui file
     to py code in-memory first and then execute it in a special frame to
     retrieve the form_class.
     """
