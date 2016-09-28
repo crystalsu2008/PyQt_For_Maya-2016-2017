@@ -1,3 +1,16 @@
+'''
+# It's loading code for maya, just put it in Maya Python script editor.
+import sys
+Dir = 'C:/Users/Administrator/Documents/DEV/PyQt_To_Maya-2016-2017'
+if Dir not in sys.path:
+    sys.path.append(Dir)
+
+import name_it;reload(name_it)
+
+name_it.delete()
+name_it.create()
+'''
+
 import sys
 
 Dir = 'C:/Users/Administrator/Documents/DEV/PyQt_To_Maya-2016-2017'
