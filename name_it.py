@@ -1,5 +1,5 @@
 '''
-# It's loading code for maya, just put it in Maya Python script editor.
+# It's loading code for maya, just put it in Maya Python script editor and run.
 import sys
 Dir = 'C:/Users/Administrator/Documents/DEV/PyQt_To_Maya-2016-2017'
 if Dir not in sys.path:
