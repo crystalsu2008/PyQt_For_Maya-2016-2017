@@ -16,13 +16,17 @@ import sys
 Dir = 'C:/Users/Administrator/Documents/DEV/PyQt_To_Maya-2016-2017'
 PyQt4Dir = 'D:/Python27/Lib/site-packages'
 
+import pymel.core as pm
+def toNativePath(strFile):
+	if pm.about(nt=True):
+		strFile = pm.encodeString(strFile).replace("/","\\")
+	return strFile
 syspath = toNativePath( os.environ.get('PATH') ).split(';')
 qt4path = toNativePath('/PyQt4')
 for eachpath in syspath:
     if qt4path in eachpath:
         sys.path.append( eachpath.partition(qt4path)[0] )
 
-import pymel.core as pm
 version = int(pm.about(v=True))
 
 if version >= 2017:
