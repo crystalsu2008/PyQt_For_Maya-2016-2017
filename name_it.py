@@ -11,7 +11,7 @@ name_it.delete()
 name_it.create()
 '''
 
-import sys
+import sys, os
 
 Dir = 'C:/Users/Administrator/Documents/DEV/PyQt_To_Maya-2016-2017'
 PyQt4Dir = 'D:/Python27/Lib/site-packages'
