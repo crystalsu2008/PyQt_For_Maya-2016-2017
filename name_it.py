@@ -13,8 +13,8 @@ name_it.create()
 
 import sys, os
 
-Dir = 'C:/Users/Administrator/Documents/DEV/PyQt_To_Maya-2016-2017'
-PyQt4Dir = 'D:/Python27/Lib/site-packages'
+Dir = 'C:/Users/Administrator/Documents/GitHub/PyQt_To_Maya-2016-2017'
+PyQt4Dir = 'C:/Python27/Lib/site-packages'
 
 import pymel.core as pm
 def toNativePath(strFile):
