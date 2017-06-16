@@ -1,6 +1,6 @@
 import sys
 
-Dir = 'C:/Users/Administrator/Documents/GitHub/PyQt_To_Maya-2016-2017'
+Dir = 'C:/Users/Administrator/Documents/GitHub/PyQt_For_Maya-2016-2017'
 PyQt4Dir = 'C:/Python27/Lib/site-packages'
 
 from pymel import versions
